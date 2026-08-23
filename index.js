@@ -33,13 +33,15 @@ async function getPokemonData(url) {
 
 // Create current pokemon card given their url
 function createPokemonCard(pokemonData) {
-    const card = document.createElement("div");
+    const card = document.createElement("div"); // Creates a new div
 
+    // Populates the new div card
     card.innerHTML = `
         <h2>${pokemonData.name}</h2>
         <p>#${pokemonData.id}</p>
         <img src="${pokemonData.sprites.front_default}">
     `;
 
+    // appends the new div card to HTML id #pokemon-container
     document.querySelector("#pokemon-container").appendChild(card);
 }
