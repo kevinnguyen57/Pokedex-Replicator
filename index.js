@@ -1,5 +1,5 @@
 
-/* Fetching Poke API v2 data */
+// Fetching Poke API v2 data
 async function getPokemon() {
     const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0");
     /* -- Basic API call
@@ -14,10 +14,32 @@ async function getPokemon() {
 
     // loop through each pokemon data
     for (const pokemon of data.results) {
-        //  console.log(pokemon.name);
-        const pokemonResponse = await fetch(pokemon.url);
-        const pokemonData = await pokemonResponse.json();
+        // const pokemonResponse = await fetch(pokemon.url); 
+        // const pokemonData = await pokemonResponse.json();
+        const pokemonData = await getPokemonData(pokemon.url); // instead of the two code above, we call getPokemonData to do it and grabs the current pokemon url
 
-        console.log(pokemonData);
+        // We call createPokemonCard and pass it the current pokemon url
+        createPokemonCard(pokemonData);
     }
+}
+
+// get a specific pokemon's data using their url
+async function getPokemonData(url) {
+    const response = await fetch(url);  // Fetch current pokemon
+    const data = await response.json(); // Converts reponse to JS data
+
+    return data;
+}
+
+// Create current pokemon card given their url
+function createPokemonCard(pokemonData) {
+    const card = document.createElement("div");
+
+    card.innerHTML = `
+        <h2>${pokemonData.name}</h2>
+        <p>#${pokemonData.id}</p>
+        <img src="${pokemonData.sprites.front_default}">
+    `;
+
+    document.querySelector("#pokemon-container").appendChild(card);
 }
