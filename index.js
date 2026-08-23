@@ -10,9 +10,14 @@ async function getPokemon() {
        -- Use this API call to make it easier making a pokedex */
     const data = await response.json();
 
-    // console.log(data); -- shows that fetching worked, all data in inspect
+    // console.log(data); -- pokemon data works and is read correctly
 
+    // loop through each pokemon data
     for (const pokemon of data.results) {
-        console.log(pokemon.name);
+        //  console.log(pokemon.name);
+        const pokemonResponse = await fetch(pokemon.url);
+        const pokemonData = await pokemonResponse.json();
+
+        console.log(pokemonData);
     }
 }
