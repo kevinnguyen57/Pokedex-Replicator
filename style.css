@@ -1,0 +1,13 @@
+
+.type {
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.grass {
+    background-color: green;
+}
+
+.poison {
+    background-color: purple;
+}
