@@ -38,9 +38,9 @@ function createPokemonCard(pokemonData) {
     // We use map to go through each type the pokemon has in the array
     // We then separate each type then join them and put it in innerHTML
     const types = pokemonData.types.map(type => type.type.name);
-    const typeHTML = types.map(
-        type => `<span class="type ${type}">${type}</span>`
-    ).join(" ");
+    const typeHTML = types
+        .map(type => `<span class="type ${type}">${type}</span>`)
+        .join(" ");
 
     // Populates the new div card
     card.innerHTML = `
