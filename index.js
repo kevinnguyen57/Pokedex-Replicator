@@ -36,10 +36,12 @@ function createPokemonCard(pokemonData) {
     const card = document.createElement("div"); // Creates a new div
 
     // Populates the new div card
+    // We use map to go through each type the pokemon has in the array
     card.innerHTML = `
         <h2>${pokemonData.name}</h2>
         <p>#${pokemonData.id}</p>
         <img src="${pokemonData.sprites.front_default}">
+        <p>${pokemonData.types.map(type => type.type.name).join(" ")}</p>
     `;
 
     // appends the new div card to HTML id #pokemon-container
