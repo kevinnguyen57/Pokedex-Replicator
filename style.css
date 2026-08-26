@@ -6,8 +6,20 @@
     color: white;
 }
 
+.normal {
+    background-color: grey;
+}
+
 .grass {
     background-color: green;
+}
+
+.fire {
+    background-color: red;
+}
+
+.water {
+    background-color: blue;
 }
 
 .poison {
