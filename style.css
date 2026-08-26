@@ -37,3 +37,35 @@
 .ground {
     background-color: burlywood;
 }
+
+.rock {
+    background-color: rgb(94, 94, 94);
+}
+
+.bug {
+    background-color: lightgreen;
+}
+
+.ghost {
+    background-color: rgb(143, 99, 143);
+}
+
+.steel {
+    background-color: rgb(189, 188, 188);
+}
+
+.electric {
+    background-color: rgb(221, 221, 14);
+}
+
+.psychic {
+    background-color: rgb(230, 83, 108);
+}
+
+.ice {
+    background-color: rgb(101, 171, 252);
+}
+
+.dragon {
+    background-color: rgb(48, 17, 223);
+}
