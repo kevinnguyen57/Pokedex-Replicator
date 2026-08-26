@@ -22,6 +22,18 @@
     background-color: blue;
 }
 
+.fighting {
+    background-color: brown;
+}
+
+.flying {
+    background-color: lightblue;
+}
+
 .poison {
     background-color: purple;
+}
+
+.ground {
+    background-color: burlywood;
 }
