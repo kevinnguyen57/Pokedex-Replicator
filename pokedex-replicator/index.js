@@ -10,9 +10,9 @@ async function getPokemon() {
        -- Use this API call to make it easier making a pokedex */
     const data = await response.json();
 
-    // console.log(data); -- pokemon data works and is read correctly
+    // console.log(data); -- Pokemon data works and is read correctly
 
-    // loop through each pokemon data
+    // loop through each Pokemon data
     for (const pokemon of data.results) {
         // const pokemonResponse = await fetch(pokemon.url); 
         // const pokemonData = await pokemonResponse.json();
@@ -23,11 +23,19 @@ async function getPokemon() {
     }
 }
 
-// get a specific pokemon's data using their url
+// get a specific Pokemon's data using their url
 async function getPokemonData(url) {
     const response = await fetch(url);  // Fetch current pokemon
     const data = await response.json(); // Converts reponse to JS data
 
+    // Start with the current Pokemon types
+    let gen1Types = data.types;
+
+    // Check if specific Pokemon has past type info
+    const gen1PastTypes = data.past_types.find(
+        pastType => pastType.generation.name === "generation-i"
+    );
+    
     return data;
 }
 
