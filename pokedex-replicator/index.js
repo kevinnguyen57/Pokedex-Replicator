@@ -45,7 +45,7 @@ async function getPokemonData(url) {
 // Create current pokemon card given their url
 function createPokemonCard(pokemonData) {
     const card = document.createElement("div"); // Creates a new div
-    card.classList.add("pokemon-card");
+    card.classList.add("pokemon-card");     // Making each card it's own element for styling later
 
     // We use map to go through each type the pokemon has in the array
     // We then separate each type then join them and put it in innerHTML
