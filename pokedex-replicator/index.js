@@ -31,11 +31,14 @@ async function getPokemonData(url) {
     // Start with the current Pokemon types
     let gen1Types = data.types;
 
-    // Check if specific Pokemon has past type info
-    const gen1PastTypes = data.past_types.find(
-        pastType => pastType.generation.name === "generation-i"
-    );
-    
+    // Find the oldest historical type info
+    if (data.past_types.length > 0) {
+        gen1Types = data.past_types[data.past_types.length - 1].types;
+    }
+
+    // Replace the current types with gen 1 types
+    data.types = gen1Types;
+
     return data;
 }
 
