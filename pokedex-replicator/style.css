@@ -6,14 +6,20 @@
     gap: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) { /* Tablet 2 per row */
     .pokemon-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) { /* Phone 1 per row */
     .pokemon-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* Pokemon Card within the container */
+.pokemon-card {
+    border: 1px solid black;
+    padding: 10px;
 }
