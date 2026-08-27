@@ -25,3 +25,8 @@
 
     cursor: pointer;
 }
+
+.pokemon-card:hover {
+    background-color: yellow;
+    transform: scale(1.1);
+}
