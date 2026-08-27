@@ -43,9 +43,10 @@ function createPokemonCard(pokemonData) {
         .join(" ");
 
     // Populates the new div card
+    // We also use padStart if we want the pokemon number like this: # 0001
     card.innerHTML = `
         <h2>${pokemonData.name}</h2>
-        <p>#${pokemonData.id}</p>
+        <p>#${pokemonData.id.toString().padStart(4, "0")}</p>
         <img src="${pokemonData.sprites.front_default}">
         <div>${typeHTML}</div>
     `;
