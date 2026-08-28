@@ -18,6 +18,7 @@
     }
 }
 
+
 /* Pokemon Card within the container */
 .pokemon-card {
     border: 1px solid black;
@@ -30,4 +31,8 @@
 .pokemon-card:hover {
     transform: translateY(-5px) scale(1.03);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card h2 {
+    text-transform: capitalize;
 }
