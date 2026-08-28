@@ -36,3 +36,7 @@
 .pokemon-card h2 {
     text-transform: capitalize;
 }
+
+.type {
+    text-transform: capitalize;
+}
