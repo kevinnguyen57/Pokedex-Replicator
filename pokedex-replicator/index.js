@@ -54,6 +54,9 @@ function createPokemonCard(pokemonData) {
         .map(type => `<span class="type ${type}">${type}</span>`)
         .join(" ");
 
+    // Capitalize Names and Types
+    pokemon_name = pokemonData.name.charAt(0).toUpperCase() 
+
     // Populates the new div card
     // We also use padStart if we want the pokemon number like this: # 0001
     card.innerHTML = `
