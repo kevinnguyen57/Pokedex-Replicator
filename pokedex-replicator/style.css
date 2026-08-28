@@ -33,6 +33,8 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Capitalizing Pokemon Names and Types */
 .pokemon-card h2 {
     text-transform: capitalize;
 }
