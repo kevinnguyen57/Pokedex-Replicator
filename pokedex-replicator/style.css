@@ -1,5 +1,8 @@
 
 /* Title of Page */
+.h1 {
+    justify-content: center;
+}
 
 /* Pokemon container */
 #pokemon-container {
