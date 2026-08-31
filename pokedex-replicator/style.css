@@ -1,7 +1,7 @@
 
 /* Title of Page */
-.h1 {
-    justify-content: center;
+h1 {
+    text-align: center;
 }
 
 /* Pokemon container */
