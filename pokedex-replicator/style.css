@@ -2,6 +2,7 @@
 /* Title of Page */
 h1 {
     text-align: center;
+    padding: 10px;
 }
 
 /* Pokemon container */
