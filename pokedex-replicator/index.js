@@ -80,3 +80,7 @@ function createPokemonCard(pokemonData) {
         modal.style.display = "flex";
     });
 }
+
+document.querySelector("#close-modal").addEventListener("click", function() {
+    document.querySelector("#pokemon-modal").style.display = "none";
+});
