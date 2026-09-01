@@ -65,4 +65,18 @@ function createPokemonCard(pokemonData) {
 
     // appends the new div card to HTML id #pokemon-container
     document.querySelector("#pokemon-container").appendChild(card);
+
+    // Pokemon Modal Info
+    card.addEventListener("click", function() {
+        const modal = document.querySelector("#pokemon-modal");
+        const modalInfo = document.querySelector("#modal-info");
+
+        modalInfo.innerHTML = `
+            <h2>${pokemonData.name}</h2>
+            <img src="${pokemonData.sprites.front_default}">
+            <p>Pokedex #: ${pokemonData.id}</p>
+        `;
+
+        modal.style.display = "flex";
+    });
 }
