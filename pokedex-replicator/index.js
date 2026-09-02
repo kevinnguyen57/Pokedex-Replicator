@@ -71,6 +71,21 @@ function createPokemonCard(pokemonData) {
         const modal = document.querySelector("#pokemon-modal"); // Takes modal ID
         const modalInfo = document.querySelector("#modal-info"); // Takes modal info ID
 
+        //
+        const abilities = pokemonData.abilities.map(
+            ability => ability.ability.name
+        ).join(", ");
+        
+        //
+        const stats = pokemonData.stats.map(
+            stat => `<p>${stat.stat.name}: ${stat.base_stat}</p>`
+        ).join("");
+        
+        //
+        const types = pokemonData.types.map(
+            type => `<span class="modal-type ${type.type.name}">${type.type.name}</span>`
+        ).join(" ");
+        
         // Populate modal info
         modalInfo.innerHTML = `
             <h2>${pokemonData.name}</h2>
