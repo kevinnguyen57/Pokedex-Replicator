@@ -89,8 +89,25 @@ function createPokemonCard(pokemonData) {
         // Populate modal info
         modalInfo.innerHTML = `
             <h2>${pokemonData.name}</h2>
-            <img src="${pokemonData.sprites.front_default}">
-            <p>Pokedex #: ${pokemonData.id}</p>
+
+            <p>#${pokemonData.id.toString().padStart(4, "0")}</p>
+
+            <img
+                class="modal-image"
+                src="${pokemonData.sprites.front_default}"
+                alt="${pokemonData.name}"
+            >
+
+            <div class="pokemon-details">
+                <p><strong>Height:</strong> ${pokemonData.height / 10} m</p>
+                <p><strong>Weight:</strong> ${pokemonData.weight / 10} kg</p>
+                <p><strong>Abilities:</strong> ${abilities}</p>
+            </div>
+
+            <div class="pokemon-stats">
+                <h3>Base Stats</h3>
+                ${stats}
+            </div>
         `;
 
         // Flex modal ID as it's currently "none"
