@@ -86,7 +86,7 @@ function createPokemonCard(pokemonData) {
             type => `<span class="modal-type ${type.type.name}">${type.type.name}</span>`
         ).join(" ");
         
-        // Populate modal info
+        // Populate modal info with what users should see when clicking on a Pokemon Card
         modalInfo.innerHTML = `
             <h2>${pokemonData.name}</h2>
 
