@@ -68,15 +68,17 @@ function createPokemonCard(pokemonData) {
 
     // Pokemon Modal Info
     card.addEventListener("click", function() {
-        const modal = document.querySelector("#pokemon-modal");
-        const modalInfo = document.querySelector("#modal-info");
+        const modal = document.querySelector("#pokemon-modal"); // Takes modal ID
+        const modalInfo = document.querySelector("#modal-info"); // Takes modal info ID
 
+        // Populate modal info
         modalInfo.innerHTML = `
             <h2>${pokemonData.name}</h2>
             <img src="${pokemonData.sprites.front_default}">
             <p>Pokedex #: ${pokemonData.id}</p>
         `;
 
+        // Flex modal ID as it's currently "none"
         modal.style.display = "flex";
     });
 }
