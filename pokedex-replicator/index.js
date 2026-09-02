@@ -83,6 +83,7 @@ function createPokemonCard(pokemonData) {
     });
 }
 
+// When close modal is clicked, do not display the pokemon modal
 document.querySelector("#close-modal").addEventListener("click", function() {
     document.querySelector("#pokemon-modal").style.display = "none";
 });
