@@ -40,15 +40,15 @@
 .modal-image {
     width: 200px;
     height: 200px;
-    image-rendering: pixelated; /* Makes img more clear */
+    image-rendering: pixelated; /* Makes img more clear by keeping pixels sharp and larger */
 }
 
 .modal-types {
-    margin: 10px 0;
+    margin: 10px 0; /* container around types, 10px top and bot, 0px left and right */
 }
 
-.modal-type {
-    display: inline-block;
+.modal-type {   /* Controls each individual type */
+    display: inline-block;  /* each type to sit next to each other, in a row */
     padding: 5px 12px;
     margin: 3px;
     border-radius: 10px;
