@@ -35,3 +35,11 @@
     background: none;
     cursor: pointer;
 }
+
+/* Styles inside modal */
+.modal-image {
+    width: 200px;
+    height: 200px;
+    image-rendering: pixelated; /* Makes img more clear */
+}
+
