@@ -43,3 +43,7 @@
     image-rendering: pixelated; /* Makes img more clear */
 }
 
+.modal-types {
+    margin: 10px 0;
+}
+
