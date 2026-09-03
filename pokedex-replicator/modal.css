@@ -55,3 +55,16 @@
     text-transform: capitalize;
     color: white;
 }
+
+.pokemon-details {
+    margin-top: 20px;
+}
+
+.pokemon-stats {
+    margin-top: 20px;
+}
+
+.pokemon-stats p {
+    margin: 5px;
+    text-transform: capitalize;
+}
