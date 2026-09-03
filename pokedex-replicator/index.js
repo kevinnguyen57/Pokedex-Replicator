@@ -98,6 +98,10 @@ function createPokemonCard(pokemonData) {
                 alt="${pokemonData.name}"
             >
 
+            <div class="modal-types">
+                ${types}
+            </div>
+
             <div class="pokemon-details">
                 <p><strong>Height:</strong> ${pokemonData.height / 10} m</p>
                 <p><strong>Weight:</strong> ${pokemonData.weight / 10} kg</p>

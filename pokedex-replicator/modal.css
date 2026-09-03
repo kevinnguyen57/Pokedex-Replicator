@@ -47,3 +47,7 @@
     margin: 10px 0;
 }
 
+.modal-type {
+    display: inline-block;
+    padding: 5px 12px;
+}
