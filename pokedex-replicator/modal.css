@@ -57,14 +57,14 @@
 }
 
 .pokemon-details {
-    margin-top: 20px;
+    margin-top: 20px; /* margin between types and height */
 }
 
 .pokemon-stats {
-    margin-top: 20px;
+    margin-top: 20px; /* margin between abilities and base stats */
 }
 
-.pokemon-stats p {
+.pokemon-stats p { /* finds every <p> in stats and styles it */
     margin: 5px;
     text-transform: capitalize;
 }
