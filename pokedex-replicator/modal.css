@@ -17,12 +17,13 @@
 /* Modal Box */
 .modal-content {
     background-color: white;
-    width: 400px;
-    min-height: 300px;
-    padding: 20px;
     border-radius: 10px;
     position: relative;
     text-align: center;
+    
+    /* width: 400px;
+    min-height: 300px;
+    padding: 20px; */
 }
 
 /* X close at top right of Modal Box */
