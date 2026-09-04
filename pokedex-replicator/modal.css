@@ -86,3 +86,11 @@
     margin-bottom: 4px;
     text-transform: capitalize;
 }
+
+.stat-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
