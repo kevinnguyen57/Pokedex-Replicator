@@ -73,3 +73,9 @@
     margin: 5px;
     text-transform: capitalize;
 }
+
+
+/* Stats */
+.stat {
+    margin: 10px 0; /* container margin top and bot 10 px */
+}
