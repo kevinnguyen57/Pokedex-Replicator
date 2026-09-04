@@ -17,6 +17,10 @@
 /* Modal Box */
 .modal-content {
     background-color: white;
+    width: 450px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 25px;
     border-radius: 10px;
     position: relative;
     text-align: center;
