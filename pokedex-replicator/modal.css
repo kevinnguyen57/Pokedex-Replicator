@@ -79,3 +79,10 @@
 .stat {
     margin: 10px 0; /* container margin top and bot 10 px */
 }
+
+.stat-name {
+    display: flex; /* left align */
+    justify-content: space-between; /* Stat name [space] number stat */
+    margin-bottom: 4px;
+    text-transform: capitalize;
+}
