@@ -78,8 +78,27 @@ function createPokemonCard(pokemonData) {
         
         // Loop and store current Pokemon stats
         const stats = pokemonData.stats.map(
-            stat => `<p>${stat.stat.name}: ${stat.base_stat}</p>`
-        ).join("");
+            stat => {
+                const statName = stat.stat.name;
+                const statValue = stat.base_stat;
+                const statPercentage = Math.min((statValue / 255) * 100, 100);
+
+                return `
+                    <div class="stat">
+                        <div class="stat-name">
+                            <span>${statName}</span>
+                            <span>${statValue}</span>
+                        </div>
+                        
+                        <div class="stat-bar">
+                            <div
+                                class="stat-fill"
+                                style="width: ${statPercentage}%">
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join("");
         
         // Loops and store current Pokemon types
         const types = pokemonData.types.map(
