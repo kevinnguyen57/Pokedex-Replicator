@@ -77,18 +77,19 @@
 
 /* Stats */
 .stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin: 10px 0; /* container margin top and bot 10 px */
 }
 
 .stat-name {
-    display: flex; /* left align */
-    justify-content: space-between; /* Stat name [space] number stat */
-    margin-bottom: 4px;
+    width: 110px;
     text-transform: capitalize;
 }
 
 .stat-bar {
-    width: 100%;
+    flex: 1;
     height: 12px;
     background-color: #ddd;
     border-radius: 6px;
