@@ -102,7 +102,7 @@ function createPokemonCard(pokemonData) {
                         
                         <div class="stat-bar">
                             <div
-                                class="stat-fill"
+                                class="stat-fill ${statColor}"
                                 style="width: ${statPercentage}%">
                             </div>
                         </div>
