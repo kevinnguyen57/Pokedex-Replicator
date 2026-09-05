@@ -95,10 +95,7 @@ function createPokemonCard(pokemonData) {
 
                 return `
                     <div class="stat">
-                        <div class="stat-name">
-                            <span>${statName}</span>
-                            <span>${statValue}</span>
-                        </div>
+                        <span class="stat-name">${statName}</span>
                         
                         <div class="stat-bar">
                             <div
@@ -106,6 +103,8 @@ function createPokemonCard(pokemonData) {
                                 style="width: ${statPercentage}%">
                             </div>
                         </div>
+
+                        <span class="stat-value">${statValue}</span>
                     </div>
                 `;
             }).join("");
