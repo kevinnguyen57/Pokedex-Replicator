@@ -89,6 +89,8 @@ function createPokemonCard(pokemonData) {
                     statColor = "low";
                 } else if (statValue < 90) {
                     statColor = "medium";
+                } else {
+                    statColor = "high";
                 }
 
                 return `
