@@ -83,6 +83,12 @@ function createPokemonCard(pokemonData) {
                 const statValue = stat.base_stat;
                 const statPercentage = Math.min((statValue / 255) * 100, 100);
 
+                let statColor;
+
+                if (statValue < 50) {
+                    statColor = "low";
+                }
+
                 return `
                     <div class="stat">
                         <div class="stat-name">
