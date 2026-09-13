@@ -151,3 +151,5 @@ function createPokemonCard(pokemonData) {
 document.querySelector("#close-modal").addEventListener("click", function() {
     document.querySelector("#pokemon-modal").style.display = "none";
 });
+
+// Back 
