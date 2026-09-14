@@ -131,8 +131,7 @@ function createPokemonCard(pokemonData) {
             </div>
 
             <div class="pokemon-details">
-                <p><strong>Height:</strong> ${pokemonData.height / 10} m</p>
-                <p><strong>Weight:</strong> ${pokemonData.weight / 10} kg</p>
+                <p><strong>Height:</strong> ${pokemonData.height / 10} m &emsp;<strong>Weight:</strong> ${pokemonData.weight / 10} kg</p>
                 <p><strong>Abilities:</strong> ${abilities}</p>
             </div>
 
