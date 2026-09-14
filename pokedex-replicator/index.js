@@ -39,6 +39,14 @@ async function getPokemonData(url) {
     // Replace the current types with gen 1 types
     data.types = gen1Types;
 
+    // Get Pokemon species information
+    const speciesResponse = await fetch(
+        `https://pokeapi.co/api/v2/pokemon-species/${data.id}/`
+    );
+
+    const speciesData = await speciesResponse.json();
+
+    
     return data;
 }
 
