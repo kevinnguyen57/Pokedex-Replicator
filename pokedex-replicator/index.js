@@ -51,8 +51,8 @@ async function getPokemonData(url) {
         entry => entry.language.name === "en"
     );
 
-    data.description= englishEntry.falvor_text;
-    
+    data.description = englishEntry.flavor_text;
+
     return data;
 }
 
@@ -148,6 +148,10 @@ function createPokemonCard(pokemonData) {
                 <p><strong>Height:</strong> ${pokemonData.height / 10} m &emsp;<strong>Weight:</strong> ${pokemonData.weight / 10} kg</p>
                 <p><strong>Abilities:</strong> ${abilities}</p>
             </div>
+
+            <p class="pokemon-description">
+                ${pokemonData.description}
+            </p>
 
             <div class="pokemon-stats">
                 <h3>Base Stats</h3>
