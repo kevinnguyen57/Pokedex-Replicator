@@ -51,7 +51,9 @@ async function getPokemonData(url) {
         entry => entry.language.name === "en"
     );
 
-    data.description = englishEntry.flavor_text;
+    data.description = englishEntry.flavor_text
+        .replace(/\f/g, " ")    // removes the \f \n and replace with " "
+        .replace(/\n/g, " ");
 
     return data;
 }
