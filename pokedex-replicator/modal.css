@@ -61,6 +61,11 @@
     color: white;
 }
 
+/* Capitalize Pokemon Name in Modal */
+.modal h2 {
+    text-transform: capitalize;
+}
+
 .pokemon-details {
     margin-top: 20px; /* margin between types and height */
 }
