@@ -46,6 +46,12 @@ async function getPokemonData(url) {
 
     const speciesData = await speciesResponse.json();
 
+    // Find English description 
+    const englishEntry = speciesData.flavor_text_entries.find(
+        entry => entry.language.name === "en"
+    );
+
+    data.description= englishEntry.falvor_text;
     
     return data;
 }
