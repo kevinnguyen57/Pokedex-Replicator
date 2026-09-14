@@ -70,6 +70,12 @@
     margin-top: 20px; /* margin between types and height */
 }
 
+.pokemon-description {
+    margin: 15px auto;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
 .pokemon-stats {
     margin-top: 20px; /* margin between abilities and base stats */
     width: fit-content;
