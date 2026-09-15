@@ -5,6 +5,11 @@ h1 {
     padding: 10px;
 }
 
+/* Font of page */
+body {
+    font-family: "Nunito", sans-serif;
+}
+
 /* Pokemon container */
 #pokemon-container {
     display: grid;
