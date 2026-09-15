@@ -152,7 +152,7 @@ function createPokemonCard(pokemonData) {
             </div>
 
             <p class="pokemon-description">
-                ${pokemonData.description}
+                <strong>Description:</strong> ${pokemonData.description}
             </p>
 
             <div class="pokemon-stats">
