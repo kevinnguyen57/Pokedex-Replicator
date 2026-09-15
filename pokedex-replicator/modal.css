@@ -30,6 +30,13 @@
     padding: 20px; */
 }
 
+/* Capitalize Pokemon name in Modal, and change Font */
+.modal-content h2 {
+    font-family: "Press Start 2P", cursive;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
 /* X close at top right of Modal Box */
 #close-modal {
     position: absolute;
@@ -61,11 +68,6 @@
     color: white;
 }
 
-/* Capitalize Pokemon Name in Modal */
-.modal h2 {
-    text-transform: capitalize;
-}
-
 .pokemon-details {
     margin-top: 20px; /* margin between types and height */
 }
@@ -81,6 +83,11 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+}
+
+.pokemon-stats h3 {
+    font-family: "Press Start 2P", cursive;
+    font-size: 14px;
 }
 
 .pokemon-stats p { /* finds every <p> in stats and styles it */

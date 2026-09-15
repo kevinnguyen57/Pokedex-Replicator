@@ -46,11 +46,14 @@ h1 {
 }
 
 
-/* Capitalizing Pokemon Names and Types */
+/* Capitalizing Pokemon Names and Font */
 .pokemon-card h2 {
+    font-family: "Press Start 2P", cursive;
     text-transform: capitalize;
+    font-size: 16px;
 }
 
+/* Capitalizing Pokemon Types */
 .type {
     text-transform: capitalize;
 }
