@@ -138,7 +138,7 @@ function createPokemonCard(pokemonData) {
 
             <img
                 class="modal-image"
-                src="${pokemonData.sprites.front_default}"
+                src="${pokemonData.sprites.versions["generation-v"]["black-white"].animated.front_default}"
                 alt="${pokemonData.name}"
             >
 
