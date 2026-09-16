@@ -49,9 +49,9 @@
 }
 
 /* Styles inside modal */
-.modal-image {
-    width: 200px;
-    height: 200px;
+.modal-image { /* img of pokemon inside modal */
+    width: 160px;
+    height: 160px;
     image-rendering: pixelated; /* Makes img more clear by keeping pixels sharp and larger */
 }
 
