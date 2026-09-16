@@ -97,7 +97,7 @@ function createPokemonCard(pokemonData) {
             stat => {
                 const statName = stat.stat.name;
                 const statValue = stat.base_stat;
-                const statPercentage = Math.min((statValue / 255) * 100, 100);
+                const statPercentage = Math.min((statValue / 180) * 100, 100); // bar percentage
 
                 let statColor;
 
