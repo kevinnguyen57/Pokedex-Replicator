@@ -18,7 +18,13 @@ h1 {
     padding: 30px 20px;
     font-family: "Press Start 2P", cursive;
     font-size: 28px;
-    margin: 0;
+
+    background-color: red;
+    border: 3px solid white;
+    border-radius: 80px;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 40px 60px;
 }
 
 /* Pokemon container */
