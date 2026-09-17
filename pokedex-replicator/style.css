@@ -12,14 +12,10 @@ body {
 }
 
 /* Pokedex Title Header */
-header {
-    background-color: #2b2b2b;
+h1 {
     color: white;
     text-align: center;
     padding: 30px 20px;
-}
-
-header h1 {
     font-family: "Press Start 2P", cursive;
     font-size: 28px;
     margin: 0;
@@ -31,6 +27,7 @@ header h1 {
     grid-template-columns: repeat(4, 250px);    /* container size */
     justify-content: center;    /* Center Containers */
     gap: 20px;
+    padding: 20px;
 }
 
 @media (max-width: 900px) { /* Tablet 2 per row */
