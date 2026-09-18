@@ -179,3 +179,23 @@ document.querySelector("#pokemon-modal").addEventListener("click", function(even
 });
 
 getPokemon(); /* Call getPokemon() Function to generate Pokedex */
+
+// Filtering
+const searchInput = document.querySelector("#search-input"); // search and stores the html id search-input
+
+searchInput.addEventListener("input", function() {          // Detects when the user types
+    const searchText = searchInput.value.toLowerCase();     // Takes the typed input, and lower cases it
+
+    const cards = document.querySelectorAll(".pokemon-card"); // Finds all Pokemon cards
+
+    cards.forEach(function(card) {  // Loops through each Pokemon card
+        const pokemonName = card.querySelector("h2").textContent.toLowerCase(); // change the current Pokemon name to lowercase
+
+        // when using .includes we don't have to type the entire Pokemon name
+        if (pokemonName.includes(searchText)) { // Checks if Pokemon name includes searchText
+            card.style.display = "";    // if true, display the Pokemon card
+        } else {
+            card.style.display = "none"; // if false, don't display the Pokemon card
+        }
+    });
+});
