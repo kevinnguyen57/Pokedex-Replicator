@@ -166,9 +166,16 @@ function createPokemonCard(pokemonData) {
     });
 }
 
-// When close modal is clicked, do not display the pokemon modal
+/* When close modal is clicked, do not display the pokemon modal
 document.querySelector("#close-modal").addEventListener("click", function() {
     document.querySelector("#pokemon-modal").style.display = "none";
+}); // removed x for another user experience */
+
+// When outside of modal is clicked, close out the modal
+document.querySelector("#pokemon-modal").addEventListener("click", function(event) {
+    if (event.target === this) {
+        this.style.display = "none";
+    }
 });
 
 getPokemon(); /* Call getPokemon() Function to generate Pokedex */
