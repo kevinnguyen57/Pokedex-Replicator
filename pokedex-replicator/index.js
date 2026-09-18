@@ -180,6 +180,7 @@ document.querySelector("#pokemon-modal").addEventListener("click", function(even
 
 getPokemon(); /* Call getPokemon() Function to generate Pokedex */
 
+
 // Filtering
 const searchInput = document.querySelector("#search-input"); // search and stores the html id search-input
 
@@ -199,3 +200,22 @@ searchInput.addEventListener("input", function() {          // Detects when the 
         }
     });
 });
+
+// Filtering: types
+const typesContainer = document.querySelector("#types");
+
+const types = [
+    "normal", "fire", "water", "electric",
+    "grass", "ice", "fighting", "poison",
+    "ground", "flying", "psychic", "bug",
+    "rock", "ghost", "dragon"
+];
+
+typesContainer.innerHTML = `
+    <button class="type-filter active" data-type="all">All</button>
+    ${types.map(type => `
+        <button class="type-filter" data-type="${type}">
+            ${type}
+        </button>
+    `).join("")}
+`;
