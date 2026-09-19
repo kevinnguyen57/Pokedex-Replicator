@@ -183,26 +183,53 @@ getPokemon(); /* Call getPokemon() Function to generate Pokedex */
 
 // Filtering
 const searchInput = document.querySelector("#search-input"); // search and stores the html id search-input
+let selectedType = "all";
 
-searchInput.addEventListener("input", function() {          // Detects when the user types
+// searchInput.addEventListener("input", function() {  
+function filterPokemon() {
     const searchText = searchInput.value.toLowerCase();     // Takes the typed input, and lower cases it
-
     const cards = document.querySelectorAll(".pokemon-card"); // Finds all Pokemon cards
 
     cards.forEach(function(card) {  // Loops through each Pokemon card
         const pokemonName = card.querySelector("h2").textContent.toLowerCase(); // change the current Pokemon name to lowercase
 
-        // when using .includes we don't have to type the entire Pokemon name
-        if (pokemonName.includes(searchText)) { // Checks if Pokemon name includes searchText
+        const pokemonTypes = Array.from(card.querySelectorAll(".type"))
+            .map(type => type.textContent.toLowerCase());
+
+        const matchesName = pokemonName.includes(searchText); // when using .includes we don't have to type the entire Pokemon name
+
+        const matchesType =
+            selectedType == "all" || pokemonTypes.includes(selectedType);
+
+        if (matchesName && matchesType) { // Checks if Pokemon name includes searchText & correct type
             card.style.display = "";    // if true, display the Pokemon card
         } else {
             card.style.display = "none"; // if false, don't display the Pokemon card
         }
     });
+}
+
+searchInput.addEventListener("input", filterPokemon); // Detects when the user types, calls function
+
+// Add the type button functionality
+const typeButtons = document.querySelectorAll(".type-filter"); // finds all the type buttons
+
+typeButtons.forEach(function(button) {
+    button.addEventListener("click", function() {   // Listen for a click
+        selectedType = button.dataset.type;
+
+        typeButtons.forEach(function(button) {
+            button.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        filterPokemon();
+    });
 });
 
 // Filtering: types
-const typesContainer = document.querySelector("#types");
+const typesContainer = document.querySelector("#types");    // Finds and stores html id types
 
 const types = [
     "normal", "fire", "water", "electric",
@@ -211,6 +238,7 @@ const types = [
     "rock", "ghost", "dragon"
 ];
 
+// loop through all types using .map and creates a button for them
 typesContainer.innerHTML = `
     <button class="type-filter active" data-type="all">All</button>
     ${types.map(type => `
