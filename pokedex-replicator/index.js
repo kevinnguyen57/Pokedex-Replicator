@@ -182,7 +182,27 @@ document.querySelector("#pokemon-modal").addEventListener("click", function(even
 const searchInput = document.querySelector("#search-input"); // search and stores the html id search-input
 let selectedType = "all";
 
-// searchInput.addEventListener("input", function() {  
+// Filtering: types
+const typesContainer = document.querySelector("#types");    // Finds and stores html id types
+
+const types = [
+    "normal", "fire", "water", "electric",
+    "grass", "ice", "fighting", "poison",
+    "ground", "flying", "psychic", "bug",
+    "rock", "ghost", "dragon"
+];
+
+// loop through all types using .map and creates a button for them
+typesContainer.innerHTML = `
+    <button class="type-filter active" data-type="all">All</button>
+    ${types.map(type => `
+        <button class="type-filter" data-type="${type}">
+            ${type}
+        </button>
+    `).join("")}
+`;
+
+// Filtering Function 
 function filterPokemon() {
     const searchText = searchInput.value.toLowerCase();     // Takes the typed input, and lower cases it
     const cards = document.querySelectorAll(".pokemon-card"); // Finds all Pokemon cards
@@ -196,7 +216,7 @@ function filterPokemon() {
         const matchesName = pokemonName.includes(searchText); // when using .includes we don't have to type the entire Pokemon name
 
         const matchesType =
-            selectedType == "all" || pokemonTypes.includes(selectedType);
+            selectedType === "all" || pokemonTypes.includes(selectedType);
 
         if (matchesName && matchesType) { // Checks if Pokemon name includes searchText & correct type
             card.style.display = "";    // if true, display the Pokemon card
@@ -224,25 +244,5 @@ typeButtons.forEach(function(button) {
         filterPokemon();    // Selected type change, re-filter
     });
 });
-
-// Filtering: types
-const typesContainer = document.querySelector("#types");    // Finds and stores html id types
-
-const types = [
-    "normal", "fire", "water", "electric",
-    "grass", "ice", "fighting", "poison",
-    "ground", "flying", "psychic", "bug",
-    "rock", "ghost", "dragon"
-];
-
-// loop through all types using .map and creates a button for them
-typesContainer.innerHTML = `
-    <button class="type-filter active" data-type="all">All</button>
-    ${types.map(type => `
-        <button class="type-filter" data-type="${type}">
-            ${type}
-        </button>
-    `).join("")}
-`;
 
 getPokemon(); /* Call getPokemon() Function to generate Pokedex */
