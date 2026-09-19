@@ -4,7 +4,7 @@
 A Gen 1 Pokédex web application built with HTML, CSS, and JavaScript using the PokeAPI.
 
 ## Live Demo
-GitHub Pages Link Here
+https://kevinnguyen57.github.io/Pokedex-Replicator/
 
 ## Features
 
