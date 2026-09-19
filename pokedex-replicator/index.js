@@ -178,9 +178,6 @@ document.querySelector("#pokemon-modal").addEventListener("click", function(even
     }
 });
 
-getPokemon(); /* Call getPokemon() Function to generate Pokedex */
-
-
 // Filtering
 const searchInput = document.querySelector("#search-input"); // search and stores the html id search-input
 let selectedType = "all";
@@ -247,3 +244,5 @@ typesContainer.innerHTML = `
         </button>
     `).join("")}
 `;
+
+getPokemon(); /* Call getPokemon() Function to generate Pokedex */
