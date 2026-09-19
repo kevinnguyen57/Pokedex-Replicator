@@ -215,16 +215,16 @@ searchInput.addEventListener("input", filterPokemon); // Detects when the user t
 const typeButtons = document.querySelectorAll(".type-filter"); // finds all the type buttons
 
 typeButtons.forEach(function(button) {
-    button.addEventListener("click", function() {   // Listen for a click
-        selectedType = button.dataset.type;
+    button.addEventListener("click", function() {   // Listen for a click for every type button
+        selectedType = button.dataset.type;         // Selected type button clicked ex: "fire"
 
-        typeButtons.forEach(function(button) {
-            button.classList.remove("active");
+        typeButtons.forEach(function(button) {      // Removes the active style from all buttons
+            button.classList.remove("active");      // Not all type buttons are selected
         });
 
-        button.classList.add("active");
+        button.classList.add("active");             // adds the active class to the button clicked
 
-        filterPokemon();
+        filterPokemon();    // Selected type change, re-filter
     });
 });
 
