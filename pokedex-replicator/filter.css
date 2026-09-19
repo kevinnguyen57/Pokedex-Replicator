@@ -23,3 +23,22 @@
     margin: 20px auto;
     padding: 0 20px;
 }
+
+.type-filter {
+    padding: 8px 14px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+}
+
+.type-filter:hover {
+    background-color: #666;
+}
+
+.type-filter:active {
+    background-color: red;
+}
